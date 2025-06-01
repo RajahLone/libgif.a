@@ -14,16 +14,12 @@ FLAGS = $(CROSSPREFIX)flags
 CFLAGS = -std=gnu99 -Wall -Wno-format-truncation
 OFLAGS = -O2 -fomit-frame-pointer
 
-SRCS = dgif_lib.c egif_lib.c getarg.c gif_err.c gif_font.c gif_hash.c gif2rgb.c gifalloc.c gifbg.c gifbuild.c gifclrmp.c gifcolor.c \
-       gifecho.c giffilter.c giffix.c gifhisto.c gifinto.c gifsponge.c giftext.c giftool.c gifwedge.c \
-       openbsd-reallocarray.c qprintf.c quantize.c
-
-OBJS = dgif_lib.o egif_lib.o getarg.o gif_err.o gif_font.o gif_hash.o gif2rgb.o gifalloc.o gifbg.o gifbuild.o gifclrmp.o gifcolor.o \
-			 gifecho.o giffilter.o giffix.o gifhisto.o gifinto.o gifsponge.o giftext.o giftool.o gifwedge.o \
-       openbsd-reallocarray.o qprintf.o quantize.o
+SRCS = dgif_lib.c egif_lib.c gifalloc.c gif_err.c gif_font.c gif_hash.c openbsd-reallocarray.c
+HDRS = gif_hash.h gif_lib.h gif_lib_private.h
+OBJS = $(SRCS:.c=.o)
 
 libgif.a:
-	cp -r *.h $(DESTDIR)/include
+	cp -r $(HDRS) $(DESTDIR)/include
 	$(CC) $(CFLAGS) -m68000 $(OFLAGS) -c $(SRCS)
 	$(AR) -rcs $@ $(OBJS)
 	$(AR) s $@
