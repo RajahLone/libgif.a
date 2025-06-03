@@ -11,7 +11,7 @@ RANLIB = $(CROSSPREFIX)ranlib
 STRIP = $(CROSSPREFIX)strip
 FLAGS = $(CROSSPREFIX)flags
 
-CFLAGS = -std=gnu99 -Wall -Wno-format-truncation
+CFLAGS = -Wall
 OFLAGS = -O2 -fomit-frame-pointer
 
 SRCS = dgif_lib.c egif_lib.c gifalloc.c gif_err.c gif_font.c gif_hash.c openbsd-reallocarray.c
