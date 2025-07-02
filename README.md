@@ -14,7 +14,7 @@ Targets: 68000, 68020-060, ColdFire
    ```./*.h``` and  
    ```./*.c``` to the current folder.  
 
-- get /libgif.a/ from [gifdec_r2_src.zip](https://ptonthat.fr/files/gifdec/gifdec_r2_src.zip) and unpack the contents to ./
+- get /libgif.a/ from [gifdec_r2_src.zip](https://ptonthat.fr/files/gifdec/gifdec_r2_src.zip) and unpack the contents to ./  
    ```./README.md```  
    ```./Makefile```  
    ```./libgif.xcodeproj```  
