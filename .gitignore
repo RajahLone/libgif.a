@@ -1,5 +1,10 @@
 .DS_Store
 *.xcodeproj
 
-*.h
-*.c
+egif_lib.c
+gif_err.c
+gif_font.c
+gif_hash.c
+gif_hash.h
+gif_lib_private.h
+openbsd-reallocarray.c

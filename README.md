@@ -14,9 +14,12 @@ Targets: 68000, 68020-060, ColdFire
    ```./*.h``` and  
    ```./*.c``` to the current folder.  
 
-- get /libgif.a/ from [gifdec_r2_src.zip](https://ptonthat.fr/files/gifdec/gifdec_r2_src.zip) and unpack the contents to ./  
+- get /libgif.a/ from [gifdec_r2_src.zip](https://ptonthat.fr/files/gifdec/gifdec_r3_src.zip) and unpack the contents to ./  
    ```./README.md```  
    ```./Makefile```  
    ```./libgif.xcodeproj```  
+   ```./dgif_lib.c``` (modified param in calloc)  
+   ```./gif_lib.h``` (modified param malloc, by macro)  
+   ```./gifalloc.c``` (modified param in calloc)  
 
 - libgif.xcodeproj is for Xcode 16.3, you may not need it if you use something else.
