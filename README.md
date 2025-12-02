@@ -18,8 +18,6 @@ Targets: 68000, 68020-060, ColdFire
    ```./README.md```  
    ```./Makefile```  
    ```./libgif.xcodeproj```  
-   ```./dgif_lib.c``` 
    ```./gif_lib.h``` (modified malloc, calloc, free functions by macro)  
-   ```./gifalloc.c```  
 
 - libgif.xcodeproj is for Xcode 16.3, you may not need it if you use something else.
