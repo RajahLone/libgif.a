@@ -13,7 +13,9 @@ SPDX-License-Identifier: MIT
 extern "C" {
 #endif /* __cplusplus */
 
-#define malloc(sz) malloc((sz + 7) & ~7) /* raj: even sizes for MagiC */
+/* raj: pad sizes for MagiC */
+#define malloc(sz) malloc((sz + 7) & ~7)
+#define calloc(cn, sz) calloc(cn, (sz + 7) & ~7)
 
 #define GIFLIB_MAJOR 5
 #define GIFLIB_MINOR 2

@@ -94,7 +94,7 @@ GifFileType *DGifOpenFileHandle(int FileHandle, int *Error) {
 	GifFile->SavedImages = NULL;
 	GifFile->SColorMap = NULL;
 
-	Private = (GifFilePrivateType *)calloc(2, sizeof(GifFilePrivateType)); /* raj: "*2" to has it even for MagiC */
+	Private = (GifFilePrivateType *)calloc(1, sizeof(GifFilePrivateType));
 	if (Private == NULL) {
 		if (Error != NULL) {
 			*Error = D_GIF_ERR_NOT_ENOUGH_MEM;
@@ -183,7 +183,7 @@ GifFileType *DGifOpen(void *userData, InputFunc readFunc, int *Error) {
 	GifFile->SavedImages = NULL;
 	GifFile->SColorMap = NULL;
 
-	Private = (GifFilePrivateType *)calloc(2, sizeof(GifFilePrivateType)); /* raj: "*2" to has it even for MagiC */
+	Private = (GifFilePrivateType *)calloc(1, sizeof(GifFilePrivateType));
 	if (!Private) {
 		if (Error != NULL) {
 			*Error = D_GIF_ERR_NOT_ENOUGH_MEM;

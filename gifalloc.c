@@ -55,7 +55,7 @@ ColorMapObject *GifMakeMapObject(int ColorCount, const GifColorType *ColorMap) {
 	}
 
 	Object->Colors =
-	    (GifColorType *)calloc(ColorCount * 2, sizeof(GifColorType)); /* raj: "*2" to has it even for MagiC */
+	    (GifColorType *)calloc(ColorCount, sizeof(GifColorType)); 
 	if (Object->Colors == (GifColorType *)NULL) {
 		free(Object);
 		return ((ColorMapObject *)NULL);
