@@ -14,8 +14,10 @@ extern "C" {
 #endif /* __cplusplus */
 
 /* raj: pad sizes for MagiC */
-#define malloc(sz) malloc((sz + 7) & ~7)
-#define calloc(cn, sz) calloc(cn, (sz + 7) & ~7)
+#define malloc(sz) malloc((sz+7)&~7)
+#define calloc(cn,sz) calloc(cn,(sz+7)&~7)
+/* raj: uses mintlib realloc() */
+#define reallocarray(pt,nb,sz) realloc(pt,((nb*sz)+7)&~7)
 
 #define GIFLIB_MAJOR 5
 #define GIFLIB_MINOR 2

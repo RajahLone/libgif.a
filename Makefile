@@ -12,9 +12,10 @@ STRIP = $(CROSSPREFIX)strip
 FLAGS = $(CROSSPREFIX)flags
 
 CFLAGS = -Wall
-OFLAGS = -O2 -fomit-frame-pointer
+OFLAGS = -O2 -fomit-frame-pointer -DHAVE_REALLOCARRAY
 
-SRCS = dgif_lib.c egif_lib.c gifalloc.c gif_err.c gif_font.c gif_hash.c openbsd-reallocarray.c
+#SRCS = dgif_lib.c egif_lib.c gifalloc.c gif_err.c gif_font.c gif_hash.c openbsd-reallocarray.c
+SRCS = dgif_lib.c egif_lib.c gifalloc.c gif_err.c gif_font.c gif_hash.c
 HDRS = gif_hash.h gif_lib.h gif_lib_private.h
 OBJS = $(SRCS:.c=.o)
 
