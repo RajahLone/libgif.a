@@ -10,7 +10,7 @@ Targets: 68000, 68020-060, ColdFire
 
 - in an empty folder,  
 
-- get /libgif.a/ from [gifdec_r4_src.zip](https://ptonthat.fr/files/gifdec/gifdec_r4_src.zip) and unpack the contents to ./  
+- get /libgif.a/ from [codecs_r4_src.zip](https://ptonthat.fr/files/gifdec/codecs_r4_src.zip) and unpack the contents to ./  
   
   Some files have been modified to change malloc/calloc/free/realloc and use ldg functions, also memset(..., '\0', ...)
   have been replaced by calloc. These changes made it more stable under MagiC environment.
